@@ -6,7 +6,7 @@ object Main extends App {
   val runtimeMirror = universe.runtimeMirror(getClass.getClassLoader)
 
   def solveProblem(n: Int): Long =
-    runtimeMirror.reflectModule(runtimeMirror.staticModule(f"Problems.Problem$n"))
+    runtimeMirror.reflectModule(runtimeMirror.staticModule(f"Problems.p$n"))
       .instance.asInstanceOf[Problems.Problem]
       .solve
   

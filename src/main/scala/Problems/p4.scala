@@ -1,6 +1,6 @@
 package Problems
 
-object Problem4 extends Problem {
+object p4 extends Problem {
   val numbers = 100 to 999
 
   val solve: Long =

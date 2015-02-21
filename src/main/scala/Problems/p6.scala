@@ -1,6 +1,6 @@
 package Problems
 
-object Problem6 extends Problem {
+object p6 extends Problem {
   val numbers = 1 to 100
 
   def square(n: Int) = n * n

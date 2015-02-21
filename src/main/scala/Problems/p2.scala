@@ -1,6 +1,6 @@
 package Problems
 
-object Problem2 extends Problem {
+object p2 extends Problem {
   lazy val fibonacci: Stream[Int] =
     0 #:: 1 #:: fibonacci.zip(fibonacci.tail).map(p => p._1 + p._2)
 
