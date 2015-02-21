@@ -3,7 +3,7 @@ import java.util.concurrent.TimeUnit
 import scala.reflect.runtime.universe
 
 object Main extends App {
-  val problems = 1 to 7
+  val problems = 1 to 8
 
   val runtimeMirror = universe.runtimeMirror(getClass.getClassLoader)
 
