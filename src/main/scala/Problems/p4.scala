@@ -1,9 +1,10 @@
 package Problems
 
 object p4 extends Problem {
-  val numbers = 100 to 999
+  lazy val numbers = 100 to 999
 
-  val solve: Long =
-    numbers.par.flatMap(i => numbers.map(i * _))
+  lazy val max = numbers.flatMap(i => numbers.map(i * _))
       .filter(p => p.toString == p.toString.reverse).max
+
+  override def solve(): String = max.toString
 }

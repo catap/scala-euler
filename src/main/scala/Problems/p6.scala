@@ -1,10 +1,11 @@
 package Problems
 
 object p6 extends Problem {
-  val numbers = 1 to 100
+  lazy val numbers = 1 to 100
 
   def square(n: Int) = n * n
 
-  val solve: Long =
-    square(numbers.sum) - numbers.map(square).sum
+  lazy val sum = square(numbers.sum) - numbers.map(square).sum
+
+  override def solve(): String = sum.toString
 }

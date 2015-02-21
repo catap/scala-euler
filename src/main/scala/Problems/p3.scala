@@ -5,6 +5,7 @@ object p3 extends Problem {
     (2 to math.sqrt(n).toInt).find(n % _ == 0)
       .map(i => i.toLong :: factors(n / i)).getOrElse(List(n))
 
-  val solve: Long =
-    factors(600851475143L).last
+  lazy val max = factors(600851475143L).last
+
+  override def solve(): String = max.toString
 }
