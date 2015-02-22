@@ -22,8 +22,9 @@ object p8 extends Problem {
                 |84580156166097919133875499200524063689912560717606
                 |05886116467109405077541002256983155200055935729725
                 |71636269561882670428252483600823257530420752963450"""
+    .stripMargin
 
   lazy val max = digit.filter(_.isDigit).map(_.asDigit.toLong).sliding(13).map(_.product).max
-  
+
   override def solve(): String = max.toString
 }
