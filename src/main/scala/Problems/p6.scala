@@ -7,5 +7,5 @@ object p6 extends Problem {
 
   lazy val sum = square(numbers.sum) - numbers.map(square).sum
 
-  override def solve(): String = sum.toString
+  override def solve(): Long = sum
 }

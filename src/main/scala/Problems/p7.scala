@@ -6,5 +6,5 @@ object p7 extends Problem {
 
   lazy val number = prime(10000)
 
-  override def solve(): String = number.toString
+  override def solve(): Long = number
 }

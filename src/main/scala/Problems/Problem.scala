@@ -1,5 +1,5 @@
 package Problems
 
 trait Problem {
-  def solve(): String
+  def solve(): Long
 }

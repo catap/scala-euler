@@ -13,5 +13,5 @@ object p9 extends Problem {
 
   lazy val product = a * b * c
 
-  override def solve(): String = product.toString
+  override def solve(): Long = product
 }

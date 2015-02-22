@@ -8,5 +8,5 @@ object p10 extends Problem {
 
   lazy val sum = primes.map(_.toLong).sum
 
-  override def solve(): String = sum.toString
+  override def solve(): Long = sum
 }

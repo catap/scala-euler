@@ -3,14 +3,15 @@ import java.util.concurrent.TimeUnit
 import scala.reflect.runtime.universe
 
 object Main extends App {
-  val problems = 1 to 11
+
+  val last_solved_problem = 11
 
   val runtimeMirror = universe.runtimeMirror(getClass.getClassLoader)
 
-  def solveProblem(n: String): String =
+  val problems = (1 to last_solved_problem).map{n =>
     runtimeMirror.reflectModule(runtimeMirror.staticModule(f"Problems.p$n"))
       .instance.asInstanceOf[Problems.Problem]
-      .solve()
+  }
   
   def durationBreakdown(duration: Long): String = {
     var nanos = duration
@@ -53,15 +54,17 @@ object Main extends App {
 
     sb.toString()
   }
-  
-  (if (args.nonEmpty)
-    args.map(_.toString).toList
-  else problems.map(_.toString).toList)
-    .foreach{ problem =>
+
+  def solveProblem(problem: Int) = {
     val start = System.nanoTime()
-    val solve = solveProblem(problem)
+    val solve = problems(problem - 1).solve()
     val end = System.nanoTime()
     val elapsed = durationBreakdown(end - start)
     println(f"Solved problem $problem: $solve for $elapsed")
   }
+
+
+  (if (args.nonEmpty)
+    args.map(_.toInt).toList
+  else (1 to last_solved_problem).toList).foreach(solveProblem)
 }

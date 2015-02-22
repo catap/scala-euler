@@ -7,5 +7,5 @@ object p3 extends Problem {
 
   lazy val max = factors(600851475143L).last
 
-  override def solve(): String = max.toString
+  override def solve(): Long = max
 }

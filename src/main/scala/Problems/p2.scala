@@ -6,5 +6,5 @@ object p2 extends Problem {
 
   lazy val sum = fibonacci.view.takeWhile(_ <= 4000000).filter(_ % 2 == 0).sum
 
-  override def solve(): String = sum.toString
+  override def solve(): Long = sum
 }

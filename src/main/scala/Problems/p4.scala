@@ -6,5 +6,5 @@ object p4 extends Problem {
   lazy val max = numbers.flatMap(i => numbers.map(i * _))
       .filter(p => p.toString == p.toString.reverse).max
 
-  override def solve(): String = max.toString
+  override def solve(): Long = max
 }

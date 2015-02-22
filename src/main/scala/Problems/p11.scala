@@ -37,5 +37,5 @@ object p11 extends Problem {
         get(x, y + 3) * get(x + 1, y + 2) * get(x + 2, y + 1) * get(x + 3, y)))
   }
 
-  override def solve(): String = products.max.toString
+  override def solve(): Long = products.max
 }

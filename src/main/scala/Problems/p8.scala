@@ -26,5 +26,5 @@ object p8 extends Problem {
 
   lazy val max = digit.filter(_.isDigit).map(_.asDigit.toLong).sliding(13).map(_.product).max
 
-  override def solve(): String = max.toString
+  override def solve(): Long = max
 }
