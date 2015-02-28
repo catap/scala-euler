@@ -6,7 +6,7 @@ import scala.reflect.runtime.universe
 
 object Main extends App {
 
-  val last_solved_problem = 28
+  val last_solved_problem = 30
 
   val runtimeMirror = universe.runtimeMirror(getClass.getClassLoader)
 
